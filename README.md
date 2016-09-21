@@ -2,8 +2,8 @@
 
 <p1>
 <strong>Charnon</strong><br>
-Complete derivation of direct kinematic equations for arm 5% </br>
-Complete derivation of inverse kinematic equations for arm 5%</br>
+<strike>Complete derivation of direct kinematic equations for arm 5% </strike></br>
+<strike>Complete derivation of inverse kinematic equations for arm 5%</strike></br>
 Write equation that avoids singularity locations </br>
 
 Estimate reach zone for given arm dimensions and motor positions
