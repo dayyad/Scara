@@ -1,14 +1,13 @@
 # Scara
+<style>
+.boxed{
+  border: 1px solid green ;
+}
+</style>
 
-<ul>
-    <li><input type="checkbox" > </li>
-    <li><input type="checkbox"  checked> bar</li>
-    <li><input type="checkbox" > baz</li>
-    
-    
-</ul>
 
 <p>
+<div class="boxed">
 Task Weight
 Core (65%)
 Complete derivation of direct kinematic equations for arm 5% </br></br>
@@ -30,6 +29,7 @@ Challenge (20%)</br></br>
 Draw the unicode snowman. 10 %</br></br>
 Draw a picture of Elf as found on assignment web-page. 10 %</br></br>
 Pictures are black and white and in raster format
+</div>
 </p>
 
 <p>
