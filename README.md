@@ -1,13 +1,11 @@
 # Scara
 <style>
-.boxed{
-  border: 1px solid green ;
+p1{border: 1px solid green ;
 }
 </style>
 
 
-<p>
-<div class="boxed">
+<p1>
 Task Weight
 Core (65%)
 Complete derivation of direct kinematic equations for arm 5% </br></br>
@@ -29,8 +27,7 @@ Challenge (20%)</br></br>
 Draw the unicode snowman. 10 %</br></br>
 Draw a picture of Elf as found on assignment web-page. 10 %</br></br>
 Pictures are black and white and in raster format
-</div>
-</p>
+</p1>
 
 <p>
 1. Derive the appropriate direct and inverse kinematic equations for your
