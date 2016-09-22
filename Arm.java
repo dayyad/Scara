@@ -1,3 +1,5 @@
+package Scara;
+
  
 
 
@@ -121,17 +123,17 @@ public class Arm
     
    // calculate tool position from motor angles 
    // updates variable in the class
-   public void directKinematic(){
+  public void directKinematic(){
        
        // midpoint between joints
-       //double  xa =.... ;
-       //double  ya =.... ;
+       double  xa =xj1 + 0.5*(xj2-xj1);
+       double  ya =yj1 + 0.5*(yj2-yj1);
        // distance between joints
        //double d = ...;
        if (d<2*r){
            valid_state = true;
          // half distance between tool positions
-         //double  h = ...;
+         double  h =  sqrt( (r*r) );
          //double alpha= ...;
          // tool position
         // double xt = ...;
