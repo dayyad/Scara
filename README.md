@@ -6,7 +6,7 @@
 <strike>Complete derivation of inverse kinematic equations for arm 5%</strike></br>
 Write equation that avoids singularity locations </br>
 
-Estimate reach zone for given arm dimensions and motor positions
+<b>Draw rectangle actual java code</b>Estimate reach zone for given arm dimensions and motor positions
 (a rectangular approximation will be sufficient to start with) 5%</br>
 
 
