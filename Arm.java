@@ -1,5 +1,3 @@
-package Scara;
-
  
 
 
@@ -123,23 +121,23 @@ public class Arm
     
    // calculate tool position from motor angles 
    // updates variable in the class
-  public void directKinematic(){
+   public void directKinematic(){
        
        // midpoint between joints
-       double  xa =xj1 + 0.5*(xj2-xj1);
-       double  ya =yj1 + 0.5*(yj2-yj1);
+       double xa =xj1 + (0.5*(xj2-xj1));
+       double ya = yj1 + (0.5*(yj2-yj1));
        // distance between joints
-       //double d = ...;
+       double d = Math.sqrt( Math.pow((xj2-xj1),2) + Math.pow((yj2-yj1),2) );
        if (d<2*r){
            valid_state = true;
          // half distance between tool positions
-         double  h =  sqrt( (r*r) );
-         //double alpha= ...;
+         double  h = Math.sqrt( Math.pow(r,2) - ( 0.25*( Math.pow((xj2-xj1),2) + Math.pow((yj2-yj1),2) ) ) );
+         double alpha= Math.atan( (yj1-yj2) / (xj2-xj1) );
          // tool position
-        // double xt = ...;
-        // double yt = ...;
-         //  xt2 = xa - h.*cos(alpha-pi/2);
-         //  yt2 = ya - h.*sin(alpha-pi/2);
+         double xt = xa + h*(Math.cos(Math.PI/2 - alpha));
+         double yt = ya + h*(Math.sin(Math.PI/2 - alpha));
+         double xt2 = xa - h*Math.cos(alpha-Math.PI/2); //math here correct? Shouldnt it be pi/2 - alpha?
+         double yt2 = ya - h*Math.sin(alpha-Math.PI/2); //same here. Double check with tutor
        } else {
            valid_state = false;
         }
@@ -157,7 +155,7 @@ public class Arm
         double dx1 = xt - xm1; 
         double dy1 = yt - ym1;
         // distance between pem and motor
-        double d1 = ...;
+        double d1 = Math.sqrt( Math.pow(dx1,2) + Math.pow(dy1,2) );
         if (d1>2*r){
             //UI.println("Arm 1 - can not reach");
             valid_state = false;
@@ -167,7 +165,7 @@ public class Arm
         double l1 = d1/2;
         double h1 = Math.sqrt(r*r - d1*d1/4);
         // elbows positions
-        //xj1 = ...;
+        //xj1 = ;
         //yj1 = ...;
 
         ///theta1 = ...;
@@ -177,10 +175,10 @@ public class Arm
             return;
         }
         
-        // theta12 = atan2(yj12 - ym1,xj12-xm1);
+        //theta12 = atan2(yj12 - ym1,xj12-xm1);
         double dx2 = xt - xm2; 
         double dy2 = yt - ym2;
-        double d2 = ...;
+        double d2 = Math.sqrt( Math.pow(dx2,2) + Math.pow(dy2,2) );
         if (d2>2*r){
            // UI.println("Arm 2 - can not reach");
             valid_state = false;
@@ -191,10 +189,10 @@ public class Arm
         
         double h2 = Math.sqrt(r*r - d2*d2/4);
         // elbows positions
-        xj2 = ...;
-        yj2 = ...;
+        //xj2 = ...;
+        //yj2 = ...;
         // motor angles for both 1st elbow positions
-        theta2 = ...;
+        //theta2 = ...;
         if ((theta2>0)||(theta2<-Math.PI)){
             valid_state = false;
             //UI.println("Ange 2 -invalid");
